@@ -1,0 +1,20 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: spring-pet-clinic-deployment
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: spring-pet-clinic
+  template:
+    metadata:
+      labels:
+        app: spring-pet-clinic
+    spec:
+      containers:
+      - image: ravij/spring-petclinic
+        name: spring-petclinic
+        ports:
+- containerPort: 80
