@@ -14,7 +14,7 @@ spec:
         app: spring-pet-clinic
     spec:
       containers:
-      - image: docker/ravij:latest
+      - image: docker/ravij
         name: spring-petclinic
         ports:
         - containerPort: 80
